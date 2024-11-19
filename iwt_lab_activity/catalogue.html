@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Catalogue</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('bgcat.jpg');
+            background-repeat: no-repeat;
+            background-size: 2000px 2000px;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: rgba(0, 255, 247, 0.411);
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        td img {
+            max-width: 100px;
+            height: auto;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .quantity-input {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Book Catalogue</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Picture</th>
+                <th>Book Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="C:\Users\hp\Downloads\cse_book.jpg" alt="Introduction to Algorithms"></td>
+                <td>Introduction to Algorithms by Cormen</td>
+                <td>₹160.00 INR</td>
+                <td><input type="number" class="quantity-input" id="quantity1" value="1" min="1"></td>
+                <td><button class="button" data-bookname="Introduction to Algorithms by Cormen" data-price="1699.00" data-quantity="1">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td><img src="C:\Users\hp\Downloads\cse_book1.jpg" alt="Operating System Concepts"></td>
+                <td>Operating System Concepts by Silberschatz</td>
+                <td>₹612.00 INR</td>
+                <td><input type="number" class="quantity-input" id="quantity2" value="1" min="1"></td>
+                <td><button class="button" data-bookname="Operating System Concepts by Silberschatz" data-price="11612.00" data-quantity="1">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td><img src="C:\Users\hp\Downloads\cse_book2.jpg" alt="Computer Networks"></td>
+                <td>Computer Networks by Tanenbaum</td>
+                <td>₹1292 INR</td>
+                <td><input type="number" class="quantity-input" id="quantity3" value="1" min="1"></td>
+                <td><button class="button" data-bookname="Computer Networks by Tanenbaum" data-price="11215.92" data-quantity="1">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td><img src="C:\Users\hp\Downloads\mech_book.jpg" alt="Mechanics of Materials"></td>
+                <td>Mechanics of Materials by Ferdinand P</td>
+                <td>₹11391.83 INR</td>
+                <td><input type="number" class="quantity-input" id="quantity4" value="1" min="1"></td>
+                <td><button class="button" data-bookname="Mechanics of Materials by Ferdinand P" data-price="11391.83" data-quantity="1">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td><img src="C:\Users\hp\Downloads\mech_book1.jpg" alt="Shigley's Mechanical Engineering Design"></td>
+                <td>Shigley's Mechanical Engineering Design by Richard G.</td>
+                <td>₹5420.00 INR</td>
+                <td><input type="number" class="quantity-input" id="quantity5" value="1" min="1"></td>
+                <td><button class="button" data-bookname="Shigley's Mechanical Engineering Design by Richard G." data-price="5420.00" data-quantity="1">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td><img src="C:\Users\hp\Downloads\mech_book2.jpg" alt="Fundamentals of Thermodynamics"></td>
+                <td>Fundamentals of Thermodynamics by Claus Borgnakke and Richard E</td>
+                <td>₹872.32 INR</td>
+                <td><input type="number" class="quantity-input" id="quantity6" value="1" min="1"></td>
+                <td><button class="button" data-bookname="Fundamentals of Thermodynamics by Claus Borgnakke and Richard E" data-price="872.32" data-quantity="1">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td><img src="C:\Users\hp\Downloads\ece_book.jpg" alt="Microelectronic Circuits"></td>
+                <td>Microelectronic Circuits by Adel S. Sedra and Kenneth C. Smith</td>
+                <td>₹19357.00 INR</td>
+                <td><input type="number" class="quantity-input" id="quantity7" value="1" min="1"></td>
+                <td><button class="button" data-bookname="Microelectronic Circuits by Adel S. Sedra and Kenneth C. Smith" data-price="19357.00" data-quantity="1">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td><img src="C:\Users\hp\Downloads\ece_book1.jpg" alt="Digital Design"></td>
+                <td>Digital Design by M. Morris Mano and Michael D. Ciletti</td>
+                <td>₹18232.16 INR</td>
+                <td><input type="number" class="quantity-input" id="quantity8" value="1" min="1"></td>
+                <td><button class="button" data-bookname="Digital Design by M. Morris Mano and Michael D. Ciletti" data-price="18232.16" data-quantity="1">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td><img src="C:\Users\hp\Downloads\ece_book2.jpg" alt="Computer Networks"></td>
+                <td>Computer Networks by Andrew S. Tanenbaum and David J. Wetherall</td>
+                <td>₹775.00 INR</td>
+                <td><input type="number" class="quantity-input" id="quantity9" value="1" min="1"></td>
+                <td><button class="button" data-bookname="Computer Networks by Andrew S. Tanenbaum and David J. Wetherall" data-price="775.00" data-quantity="1">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td><img src="C:\Users\hp\Downloads\civil_book.jpg" alt="Concrete Technology"></td>
+                <td>Concrete Technology by M.S. Shetty</td>
+                <td>₹546.00 INR</td>
+                <td><input type="number" class="quantity-input" id="quantity10" value="1" min="1"></td>
+                <td><button class="button" data-bookname="Concrete Technology by M.S. Shetty" data-price="546.00" data-quantity="1">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td><img src="C:\Users\hp\Downloads\civil_book1.jpg" alt="Engineering Materials"></td>
+                <td>Engineering Materials by Rangwala</td>
+                <td>₹250.00 INR</td>
+                <td><input type="number" class="quantity-input" id="quantity11" value="1" min="1"></td>
+                <td><button class="button" data-bookname="Engineering Materials by Rangwala" data-price="250.00" data-quantity="1">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td><img src="C:\Users\hp\Downloads\civil_book2.jpg" alt="Geotechnical Engineering"></td>
+                <td>Geotechnical Engineering by C. Venkatramaiah</td>
+                <td>₹1049.00 INR</td>
+                <td><input type="number" class="quantity-input" id="quantity12" value="1" min="1"></td>
+                <td><button class="button" data-bookname="Geotechnical Engineering by C. Venkatramaiah" data-price="1049.00" data-quantity="1">Add to Cart</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="catalogue.js"></script>
+</body>
+</html>

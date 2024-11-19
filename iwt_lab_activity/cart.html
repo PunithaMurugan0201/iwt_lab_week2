@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <style>
+        body {
+            margin: 10px;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .cart-container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .cart-total {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: right;
+        }
+        #checkout-button {
+            display: block;
+            width: 200px;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-align: center;
+            margin-left: auto;
+        }
+        #checkout-button:hover {
+            background-color: #218838;
+        }
+        .remove-button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+        .remove-button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Your Cart</h1>
+        <nav>
+            <a href="catalogue.html">Catalogue</a> | 
+            <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <main class="cart-container">
+        <h2>Items in Your Cart</h2>
+        <table id="cart-table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Book Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Amount</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Cart items will be inserted here -->
+            </tbody>
+        </table>
+        <div class="cart-total">
+            Total: ₹<span id="total-price">0.00</span>
+        </div>
+        <button id="checkout-button">Proceed to Checkout</button>
+    </main>
+
+    <script src="cart.js"></script>
+</body>
+</html>

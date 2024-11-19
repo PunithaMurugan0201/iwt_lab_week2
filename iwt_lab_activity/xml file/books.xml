@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="books.xsl"?>
+<!DOCTYPE books SYSTEM "books.dtd">
+<books>
+    <book>
+        <title>The Art of War</title>
+        <author>Sun Tzu</author>
+        <isbn>123456789</isbn>
+        <publisher>Tales Publishing</publisher>
+        <edition>1st</edition>
+        <price>$180.00</price>
+    </book>
+    <book>
+        <title>Don't Believe Everything You Think</title>
+        <author>Joseph Nguzen</author>
+        <isbn>987654321</isbn>
+        <publisher>Tales Publishing</publisher>
+        <edition>2nd</edition>
+        <price>$110.00</price>
+    </book>
+<book>
+        <title>Distributed Systems</title>
+        <author>Sukumar Gosh</author>
+        <isbn>5698423651</isbn>
+        <publisher>Engineering Publishing</publisher>
+        <edition>1st</edition>
+        <price>$85.00</price>
+    </book>
+<book>
+        <title>Introduction to C++</title>
+        <author>George S. Tselikis</author>
+        <isbn>652481597</isbn>
+        <publisher>K.V Publishing</publisher>
+        <edition>3nd</edition>
+        <price>$859.00</price>
+    </book>
+<book>
+        <title>Computer fundamentals and Programming in C </title>
+        <author>Reema Thareja</author>
+        <isbn>235641857</isbn>
+        <publisher>Seema Publishing</publisher>
+        <edition>1st</edition>
+        <price>$990.00</price>
+    </book>
+<book>
+        <title>Microelectronics Circuits</title>
+        <author>Adel S. Sedra and Kenneth C. Smith</author>
+        <isbn>356241895</isbn>
+        <publisher>K.V Publishing</publisher>
+        <edition>3rd</edition>
+        <price>$129.00</price>
+    </book>
+<book>
+        <title>Race to Build the Quantum Internet</title>
+        <author>Jonathan P. Dowling</author>
+        <isbn>452136985</isbn>
+        <publisher>Engineering Publishing</publisher>
+        <edition>2nd</edition>
+        <price>$120.00</price>
+    </book>
+<book>
+        <title>Electromagnetic Field Theory for Engineering and Physics</title>
+        <author>Gunther Lehner</author>
+        <isbn>698532418</isbn>
+        <publisher>Seema Publishing</publisher>
+        <edition>1st</edition>
+        <price>$199.00</price>
+    </book>
+<book>
+        <title>Analog Electronics</title>
+        <author>Johan H. Huijsing</author>
+        <isbn>754126398</isbn>
+        <publisher>K.V Publishing</publisher>
+        <edition>2nd</edition>
+        <price>$179.00</price>
+    </book>
+<book>
+        <title>Adaptive Digital Circuits</title>
+        <author>Saurabh Jain</author>
+        <isbn>235148562</isbn>
+        <publisher>Seema Publishing</publisher>
+        <edition>3rd</edition>
+        <price>$1499.00</price>
+    </book>
+<book>
+        <title>Fundamentals of Elecctronics</title>
+        <author>Thomas F. Schubert</author>
+        <isbn>521364287</isbn>
+        <publisher>Engineering Publishing</publisher>
+        <edition>2nd</edition>
+        <price>$199.00</price>
+    </book>
+<book>
+        <title>Fundamentals of Robotic Mechanical Systems</title>
+        <author>Jorge Angeles</author>
+        <isbn>235148562</isbn>
+        <publisher>K.V Publishing</publisher>
+        <edition>1st</edition>
+        <price>$899.00</price>
+    </book>
+<book>
+        <title>Engineering Graphics</title>
+        <author>V.P Kumar</author>
+        <isbn>756234185</isbn>
+        <publisher>Seema Publishing</publisher>
+        <edition>3rd</edition>
+        <price>$800.00</price>
+    </book>
+<book>
+        <title>Fluid Mechanics</title>
+        <author>Dr.R.K. Bansal</author>
+        <isbn>452369852</isbn>
+        <publisher>Engineering Publishing</publisher>
+        <edition>2nd</edition>
+        <price>$1200.00</price>
+    </book>
+</books>

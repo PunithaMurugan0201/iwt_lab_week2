@@ -1,0 +1,98 @@
+<html>
+  <style>
+    body{
+      height:100%;
+      margin:0;
+      display: flex;
+      justify-content:center;
+      color: rgb(13, 5, 5);
+      align-items:center;
+      background-image: url('bg_img5.jpg');
+      background-size: 1200px 700px;
+      background-color: transparent;
+      
+    }
+    .form-container{
+      width:300px;
+      padding:20px;
+      border:3px solid #ececf0f0;
+      box-shadow: 0 0 10px rgba(162, 219, 247, 0.927)
+      
+    }
+    
+    input{
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    input[type="submit"]
+    {
+      margin-top:10px;
+      width:100px;
+      height:40px;
+      color:black;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    input[type="reset"]
+    {
+      margin-top:10px;
+      width:100px;
+      height:40px;
+      color:black;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+      }
+  </style>
+<body>
+  <div class="form-container">
+      <form  action="login.php" method="POST" onsubmit="return(validate());">
+          <label for="login">Login ID:&nbsp</label>
+          <input type="text" id="login" name="login" required><br>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required><br>
+          <center>
+              <input type="submit" value="Submit">
+              <input type="reset" value="Reset">
+          </center>
+      </form>
+  </div>
+  <script>
+      function validate() {
+          var name = document.getElementById("login").value;
+          var password = document.getElementById("password").value;
+
+          if (name == "") {
+              alert("Enter the login ID");
+              document.form1.login.focus();
+              return false;
+          }
+          if (!isNaN(name)) {
+              alert("Enter alphabets only for the login ID");
+              document.form1.login.value = "";
+              document.form1.login.focus();
+              return false;
+          }
+          if (password.length < 6) {
+              alert("Enter at least 6 characters for the password");
+              document.form1.password.value = "";
+              document.form1.password.focus();
+              return false;
+          }
+          return true;
+      }
+  </script>
+</body>
+</html>

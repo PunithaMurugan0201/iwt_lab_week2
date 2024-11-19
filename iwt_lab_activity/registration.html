@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+     body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('right1.jpg');
+    background-size: 1200px 800px;
+    padding: 30px;
+    text-align: center;
+    }
+
+    h2 {
+    margin-top: 10px; 
+    color: rgb(20, 18, 18);
+    font-size: xx-large;
+    }
+
+.container {
+    width: 400px;
+    margin: 10vh auto 0 auto;
+    background: rgba(29, 234, 227, 0.679);
+    border-radius: 5px; 
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex; 
+    align-items: center; 
+}
+
+.form-group label {
+    flex: 1; 
+    margin-right: 15px; 
+    text-align: left; 
+}
+
+.form-group textarea {
+    flex: 3; 
+    padding: 5px;
+    box-sizing: border-box;
+    
+    }
+    .form-group input{
+        flex: 3;
+    padding: 8px;
+    box-sizing: border-box;
+    }
+    
+.form-group select{
+    flex: 3;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.form-group input[type="radio"],
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.form-group .languages-checkbox {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+.login-link {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.login-link a {
+    color: #195d5d;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <form action="register.php" id="form" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label>Sex:</label>
+                <input type="radio" id="male" name="sex" value="MALE">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="sex" value="FEMALE">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="sex" value="OTHER">
+                <label for="other">Other</label>
+            </div>
+            <div class="form-group">
+                <label>Date of Birth:</label>
+                <select id="dob-day" name="dob-day" required>
+                    <option value="">Day</option>
+                    <script>
+                        for (let i = 1; i <= 31; i++) {
+                            document.write(`<option value="${i}">${i}</option>`);
+                        }
+                    </script>
+                </select>
+                <select id="dob-month" name="dob-month" required>
+                    <option value="">Month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <select id="dob-year" name="dob-year" required>
+                    <option value="">Year</option>
+                    <script>
+                        let currentYear = new Date().getFullYear();
+                        for (let i = currentYear; i >= 1900; i--) {
+                            document.write(`<option value="${i}">${i}</option>`);
+                        }
+                    </script>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Languages Known:</label>
+                <div class="languages-checkbox">
+                    <input type="checkbox" id="english" name="languages[]" value="english">
+                    <label for="english">English</label>
+                </div>
+                <div class="languages-checkbox">
+                    <input type="checkbox" id="telugu" name="languages[]" value="telugu">
+                    <label for="telugu">Telugu</label>
+                </div>
+                <div class="languages-checkbox">
+                    <input type="checkbox" id="hindi" name="languages[]" value="hindi">
+                    <label for="hindi">Hindi</label>
+                </div>
+                <div class="languages-checkbox">
+                    <input type="checkbox" id="tamil" name="languages[]" value="tamil">
+                    <label for="tamil">Tamil</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+        <div class="login-link">
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('form');
+
+            form.addEventListener('submit', (event) => {
+                let valid = true;
+                let errorMessage = '';
+
+                // Name Validation
+                const name = document.getElementById('name').value;
+                if (name.trim() === '') {
+                    valid = false;
+                    errorMessage += 'Name is required.\n';
+                }
+
+                // Email Validation
+                const email = document.getElementById('email').value;
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    valid = false;
+                    errorMessage += 'Please enter a valid email address.\n';
+                }
+
+                // Phone Number Validation
+                const phone = document.getElementById('phone').value;
+                const phonePattern = /^\d{10}$/; // Assuming 10-digit phone number
+                if (!phonePattern.test(phone)) {
+                    valid = false;
+                    errorMessage += 'Phone number must be 10 digits.\n';
+                }
+
+                // Gender Validation
+                const gender = document.querySelector('input[name="sex"]:checked');
+                if (!gender) {
+                    valid = false;
+                    errorMessage += 'Please select your gender.\n';
+                }
+
+                // Date of Birth Validation
+                const dobDay = document.getElementById('dob-day').value;
+                const dobMonth = document.getElementById('dob-month').value;
+                const dobYear = document.getElementById('dob-year').value;
+                if (!dobDay || !dobMonth || !dobYear) {
+                    valid = false;
+                    errorMessage += 'Please select your date of birth.\n';
+                }
+
+                // Address Validation
+                const address = document.getElementById('address').value;
+                if (address.trim() === '') {
+                    valid = false;
+                    errorMessage += 'Address is required.\n';
+                }
+
+                // Display Error Messages
+                if (!valid) {
+                    alert(errorMessage);
+                    event.preventDefault(); // Prevent form submission
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>

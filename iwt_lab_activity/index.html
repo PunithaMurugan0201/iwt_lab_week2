@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        body {
+           
+           
+            background-size: cover; 
+            background-position: center; /* Centers the background image */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            margin: 0 ; /* Removes default margins */
+            padding: 0; /* Removes default padding */
+            height: 100%; /* Ensures the body takes up the full height */
+            overflow:hidden;
+        }
+        frame {
+            background-color: transparent;
+            border:none;
+        }
+    </style>
+</head>
+    <frameset rows="20%,80%">
+        <frame src="top.html" name="topFrame" >
+        <frameset cols="20%,80%">
+          <frame src="left.html"  name="leftFrame">
+          <frame src="right.html"  name="rightFrame" >
+        </frameset>
+    </frameset>
+    </html>
